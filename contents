@@ -1,23 +1,211 @@
-En tant que client, je souhaite être averti que mon n° de compte doit être une donnée sensible. 
-
- Ecran aide identifiant oublié (capture en PJ) / Ajouter une phrase après "vous recevez votre identifiant par SMS." 
-La phrase à ajouter est : 
-Arabe : 
-
-كإجراء أمني، كانذكروك بأنه ما خاصكش تبوح أبدا بالمعرف و/أو كلمة السر و/أو الأرقام السبعة من رقم الحساب ديالك بأي طريقة كانت. الشركة العامة ما غاديش تطلب منك في أي حال من الأحوال ولأي سبب أنك تعطيها كلمة السر ديالك
+En tant que client, je souhaite distinguer mes plafonds de retrait SG et confrères. 
 
  
 
-Français :
+1- Prendre en compte le champs "Period" du plafond et consommé pour le retrait SG ajouté par la monétique : 
+    1 - Plafond paramétré : nom communiqué par Ibrahim 
+    2 - Plafond max. contractuel : nom communiqué par Ibrahim
+    3 - Consommé plafond : nom communiqué par Ibrahim
+2- Le libellé du plafond retrait est à reprendre comme sur l'écran actuel PROD des plafonds :
 
-Par mesure de sécurité, nous vous rappelons de ne jamais communiquer votre identifiant, mot de passe et/ou les 7 chiffres du n° de compte par quelque moyen que ce soit. 
+3 1- SgRetrait => RETRAIT SG
+  2 -NationalRetrait => RETRAIT CONFRÈRES
+4- L'ordre d'affichage est le suivant : 
+   # Plafonds nationaux
+     1 - RETRAIT SG
+     2 - RETRAIT CONFRÈRES
+     3 - PAIEMENT
+     4 - PAIEMENT INTERNET
+   # Plafonds internationaux
+     1 - RETRAIT ETRANGER
+     2 - PAIEMENT ETRANGER
+     3 - PAIEMENT INTERNET ETRANGER
+ 
+
+Critères d'acceptance : 
+
+Je me connecte au compte 0144144 et me dirige vers la carte VISA GOLD et affiche les plafonds de la carte
+Je vois les plafonds dans l'ordre indiqué dans la RG 3
+Je peux modifier à la hausse et à la baisse le montant de tous les plafonds nationaux de la RG 3.1
+ 
+
+Ceiling type 
+
+  * =  ['WITHDRAWAL','WITHDRAWAL_SG', 'PURCHASE', 'ECOMMERCE'],*
 
  
 
-Anglais : 
+{
 
-As a safety measure, you should remember to never share your username, password and/or the 7 digits of the account number by any means whatsoever.
+  "national": {
+
+    "max": {
+
+      "daily": {
+
+        "withdrawal": 0.0,
+
+        "withdrawalSG": 0.0,
+
+        "payment": 0.0,
+
+        "ecommerce": 0.0
+
+      },
+
+      "periodic":
+
+{         "withdrawal": 0.0,         *"withdrawalSG": 0.0,*         "payment": 0.0,         "ecommerce": 0.0       }
+    },
+
+    "current": {
+
+      "daily": {
+
+        "withdrawal": 0.0,
+
+        "withdrawalSG": 0.0,
+
+        "payment": 0.0,
+
+        "ecommerce": 0.0
+
+      },
+
+      "periodic": {
+
+        "withdrawal": 0.0,
+
+        "withdrawalSG": 0.0,
+
+        "payment": 0.0,
+
+        "ecommerce": 0.0
+
+      }
+
+    },
+
+    "consumed": {
+
+      "daily": {
+
+        "withdrawal": 0.0,
+
+        "withdrawalSG": 0.0,
+
+        "payment": 0.0,
+
+        "ecommerce": 0.0
+
+      },
+
+      "periodic": {
+
+        "withdrawal": 0.0,
+
+        "withdrawalSG": 0.0,
+
+        "payment": 0.0,
+
+        "ecommerce": 0.0
+
+      }
+
+    }
+
+  },
+
+  "international": {
+
+    "max": {
+
+      "daily": {
+
+        "withdrawal": 0.0,
+
+        "withdrawalSG": 0.0,
+
+        "payment": 0.0,
+
+        "ecommerce": 0.0
+
+      },
+
+      "periodic": {
+
+        "withdrawal": 0.0,
+
+        "withdrawalSG": 0.0,
+
+        "payment": 0.0,
+
+        "ecommerce": 0.0
+
+      }
+
+    },
+
+    "current": {
+
+      "daily": {
+
+        "withdrawal": 0.0,
+
+        "withdrawalSG": 0.0,
+
+        "payment": 0.0,
+
+        "ecommerce": 0.0
+
+      },
+
+      "periodic": {
+
+        "withdrawal": 0.0,
+
+        "withdrawalSG": 0.0,
+
+        "payment": 0.0,
+
+        "ecommerce": 0.0
+
+      }
+
+    },
+
+    "consumed": {
+
+      "daily": {
+
+        "withdrawal": 0.0,
+
+        "withdrawalSG": 0.0,
+
+        "payment": 0.0,
+
+        "ecommerce": 0.0
+
+      },
+
+      "periodic": {
+
+        "withdrawal": 0.0,
+
+        "withdrawalSG": 0.0,
+
+        "payment": 0.0,
+
+        "ecommerce": 0.0
+
+      }
+
+    }
+
+  }
+
+}
 
  
 
-NB : cette demande fait suite à une exigence sécurité.
+ 
