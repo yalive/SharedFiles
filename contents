@@ -10,6 +10,8 @@ Le cercle au du n° se rempli en fonction du nb total d'étapes
 Si total = 4 => remplir en divisant les tranches par 4
 Si total = 3 => remplir en divisant les tranches par 3 ...
 Le texte à côté des n° est celui présent en-dessous de la timeline actuelle
+
+
 Virement (bénéficiaire et compte à compte) et Dons
 Titre 1 : CHOIX COMPTE ÉMETTEUR
 Sous-titre 1 : Sélectionnez le compte émetteur du virement
@@ -19,6 +21,8 @@ Titre 3 : SAISIE DU MONTANT
 Sous-titre 3 : Renseignez le montant et une brève description
 Titre 4 : RÉCAPITULATIF VIREMENT
 Sous-titre 4 : Vérifiez les informations avant de valider
+
+
 Recharge carte prépayée (textes changeant vs. virement en vert) : 
 Titre 1 : CHOIX COMPTE ÉMETTEUR
 Sous-titre 1 : Sélectionnez le compte à utiliser pour recharger la carte
@@ -28,6 +32,9 @@ Titre 3 : SAISIE DU MONTANT
 Sous-titre 3 : Renseignez le montant et une brève description
 Titre 4 : RÉCAPITULATIF RECHARGE
 Sous-titre 4 : Vérifiez les informations avant de valider
+
+
+
 Paiement de facture (textes changeant vs. virement en vert) : 
 Titre 1 : SÉLECTION DE FACTURE(S) / SÉLECTION DE RECHARGE
 Sous-titre 1 : Sélectionnez la ou les factures à payer / Sélectionner votre recharge
@@ -35,6 +42,10 @@ Titre 2 : CHOIX DU COMPTE
 Sous-titre 2 : Sélectionnez le compte à débiter pour le paiement
 Titre 3 : RÉCAPITULATIF PAIEMENT
 Sous-titre 3 : Vérifiez les informations avant de valider
+
+
+
+
 Mise à disposition (textes changeant vs. virement en vert) : 
 Titre 1 : CHOIX COMPTE ÉMETTEUR
 Sous-titre 1 : Sélectionnez le compte émetteur de la mise à disposition
@@ -42,6 +53,8 @@ Titre 2 : CHOIX DU MONTANT
 Sous-titre 2 : Sélectionnez le montant à retirer sur l'un des GAB Société Générale
 Titre 3 : RÉCAPITULATIF OPÉRATION
 Sous-titre 3 : Vérifiez les informations avant de valider
+
+
 Commande chéquier (textes changeant vs. virement en vert) : 
 Titre 1 : CHOIX DU COMPTE
 Sous-titre 1 : Sélectionnez le compte pour lequel vous souhaiter un chéquier
@@ -49,4 +62,6 @@ Titre 2 : CHOIX DU CHÉQUIER
 Sous-titre 2 : Sélectionnez le type de chéquier que vous souhaitez commander
 Titre 3 : RÉCAPITULATIF COMMANDE
 Sous-titre 3 : Vérifiez votre commande chéquier avant validation
+
+
 Mon dossier client (sera traité dans une autre carte
