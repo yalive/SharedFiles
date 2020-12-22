@@ -1,211 +1,52 @@
-En tant que client, je souhaite distinguer mes plafonds de retrait SG et confrères. 
+
+En tant que client, je souhaite avoir une Timeline avec titre et sous-titre.
 
  
 
-1- Prendre en compte le champs "Period" du plafond et consommé pour le retrait SG ajouté par la monétique : 
-    1 - Plafond paramétré : nom communiqué par Ibrahim 
-    2 - Plafond max. contractuel : nom communiqué par Ibrahim
-    3 - Consommé plafond : nom communiqué par Ibrahim
-2- Le libellé du plafond retrait est à reprendre comme sur l'écran actuel PROD des plafonds :
-
-3 1- SgRetrait => RETRAIT SG
-  2 -NationalRetrait => RETRAIT CONFRÈRES
-4- L'ordre d'affichage est le suivant : 
-   # Plafonds nationaux
-     1 - RETRAIT SG
-     2 - RETRAIT CONFRÈRES
-     3 - PAIEMENT
-     4 - PAIEMENT INTERNET
-   # Plafonds internationaux
-     1 - RETRAIT ETRANGER
-     2 - PAIEMENT ETRANGER
-     3 - PAIEMENT INTERNET ETRANGER
- 
-
-Critères d'acceptance : 
-
-Je me connecte au compte 0144144 et me dirige vers la carte VISA GOLD et affiche les plafonds de la carte
-Je vois les plafonds dans l'ordre indiqué dans la RG 3
-Je peux modifier à la hausse et à la baisse le montant de tous les plafonds nationaux de la RG 3.1
- 
-
-Ceiling type 
-
-  * =  ['WITHDRAWAL','WITHDRAWAL_SG', 'PURCHASE', 'ECOMMERCE'],*
-
- 
-
-{
-
-  "national": {
-
-    "max": {
-
-      "daily": {
-
-        "withdrawal": 0.0,
-
-        "withdrawalSG": 0.0,
-
-        "payment": 0.0,
-
-        "ecommerce": 0.0
-
-      },
-
-      "periodic":
-
-{         "withdrawal": 0.0,         *"withdrawalSG": 0.0,*         "payment": 0.0,         "ecommerce": 0.0       }
-    },
-
-    "current": {
-
-      "daily": {
-
-        "withdrawal": 0.0,
-
-        "withdrawalSG": 0.0,
-
-        "payment": 0.0,
-
-        "ecommerce": 0.0
-
-      },
-
-      "periodic": {
-
-        "withdrawal": 0.0,
-
-        "withdrawalSG": 0.0,
-
-        "payment": 0.0,
-
-        "ecommerce": 0.0
-
-      }
-
-    },
-
-    "consumed": {
-
-      "daily": {
-
-        "withdrawal": 0.0,
-
-        "withdrawalSG": 0.0,
-
-        "payment": 0.0,
-
-        "ecommerce": 0.0
-
-      },
-
-      "periodic": {
-
-        "withdrawal": 0.0,
-
-        "withdrawalSG": 0.0,
-
-        "payment": 0.0,
-
-        "ecommerce": 0.0
-
-      }
-
-    }
-
-  },
-
-  "international": {
-
-    "max": {
-
-      "daily": {
-
-        "withdrawal": 0.0,
-
-        "withdrawalSG": 0.0,
-
-        "payment": 0.0,
-
-        "ecommerce": 0.0
-
-      },
-
-      "periodic": {
-
-        "withdrawal": 0.0,
-
-        "withdrawalSG": 0.0,
-
-        "payment": 0.0,
-
-        "ecommerce": 0.0
-
-      }
-
-    },
-
-    "current": {
-
-      "daily": {
-
-        "withdrawal": 0.0,
-
-        "withdrawalSG": 0.0,
-
-        "payment": 0.0,
-
-        "ecommerce": 0.0
-
-      },
-
-      "periodic": {
-
-        "withdrawal": 0.0,
-
-        "withdrawalSG": 0.0,
-
-        "payment": 0.0,
-
-        "ecommerce": 0.0
-
-      }
-
-    },
-
-    "consumed": {
-
-      "daily": {
-
-        "withdrawal": 0.0,
-
-        "withdrawalSG": 0.0,
-
-        "payment": 0.0,
-
-        "ecommerce": 0.0
-
-      },
-
-      "periodic": {
-
-        "withdrawal": 0.0,
-
-        "withdrawalSG": 0.0,
-
-        "payment": 0.0,
-
-        "ecommerce": 0.0
-
-      }
-
-    }
-
-  }
-
-}
-
- 
-
- 
+Intégrer la nouvelle timeline (maquettes en PJ)
+Timeline / Numéro de l'étape est dans le rond à gauche => X / 4
+Nombre max de l'étape dépend du nombre d'étapes par parcours => 1 / X
+Le cercle au du n° se rempli en fonction du nb total d'étapes 
+Si total = 4 => remplir en divisant les tranches par 4
+Si total = 3 => remplir en divisant les tranches par 3 ...
+Le texte à côté des n° est celui présent en-dessous de la timeline actuelle
+Virement (bénéficiaire et compte à compte) et Dons
+Titre 1 : CHOIX COMPTE ÉMETTEUR
+Sous-titre 1 : Sélectionnez le compte émetteur du virement
+Titre 2 : CHOIX BÉNÉFICIAIRE
+Sous-titre 2 : Sélectionnez le destinataire du virement
+Titre 3 : SAISIE DU MONTANT
+Sous-titre 3 : Renseignez le montant et une brève description
+Titre 4 : RÉCAPITULATIF VIREMENT
+Sous-titre 4 : Vérifiez les informations avant de valider
+Recharge carte prépayée (textes changeant vs. virement en vert) : 
+Titre 1 : CHOIX COMPTE ÉMETTEUR
+Sous-titre 1 : Sélectionnez le compte à utiliser pour recharger la carte
+Titre 2 : CHOIX BÉNÉFICIAIRE
+Sous-titre 2 : Sélectionnez la carte à recharger
+Titre 3 : SAISIE DU MONTANT
+Sous-titre 3 : Renseignez le montant et une brève description
+Titre 4 : RÉCAPITULATIF RECHARGE
+Sous-titre 4 : Vérifiez les informations avant de valider
+Paiement de facture (textes changeant vs. virement en vert) : 
+Titre 1 : SÉLECTION DE FACTURE(S) / SÉLECTION DE RECHARGE
+Sous-titre 1 : Sélectionnez la ou les factures à payer / Sélectionner votre recharge
+Titre 2 : CHOIX DU COMPTE
+Sous-titre 2 : Sélectionnez le compte à débiter pour le paiement
+Titre 3 : RÉCAPITULATIF PAIEMENT
+Sous-titre 3 : Vérifiez les informations avant de valider
+Mise à disposition (textes changeant vs. virement en vert) : 
+Titre 1 : CHOIX COMPTE ÉMETTEUR
+Sous-titre 1 : Sélectionnez le compte émetteur de la mise à disposition
+Titre 2 : CHOIX DU MONTANT
+Sous-titre 2 : Sélectionnez le montant à retirer sur l'un des GAB Société Générale
+Titre 3 : RÉCAPITULATIF OPÉRATION
+Sous-titre 3 : Vérifiez les informations avant de valider
+Commande chéquier (textes changeant vs. virement en vert) : 
+Titre 1 : CHOIX DU COMPTE
+Sous-titre 1 : Sélectionnez le compte pour lequel vous souhaiter un chéquier
+Titre 2 : CHOIX DU CHÉQUIER
+Sous-titre 2 : Sélectionnez le type de chéquier que vous souhaitez commander
+Titre 3 : RÉCAPITULATIF COMMANDE
+Sous-titre 3 : Vérifiez votre commande chéquier avant validation
+Mon dossier client (sera traité dans une autre carte
