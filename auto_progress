@@ -1,0 +1,28 @@
+@SuppressLint("ClickableViewAccessibility")
+fun SeekBar.autoProgressWhenLongPress(view: View, direction: MainActivity.ProgressDirection) {
+    var longPressStarted = false
+    val handler = Handler()
+    val runnable = object : Runnable {
+        override fun run() {
+            val currentProgress = progress
+            progress = currentProgress + direction.step
+            handler.postDelayed(this, 10L)
+        }
+    }
+
+    view.setOnLongClickListener {
+        longPressStarted = true
+        handler.post(runnable)
+        true
+    }
+
+    view.setOnTouchListener { v, event ->
+        if (event.actionMasked == MotionEvent.ACTION_UP) {
+            if (longPressStarted) {
+                longPressStarted = false
+                handler.removeCallbacks(runnable)
+            }
+        }
+        false
+    }
+}
